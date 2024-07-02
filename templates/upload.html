@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Speech Emotion Recognition</title>
+</head>
+<body>
+    <h1>Speech Emotion Recognition</h1>
+    
+    {% if error %}
+    <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+    
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="audio/*">
+        <input type="submit" value="Upload and Analyze">
+    </form>
+    
+    {% if result %}
+    <h2>Analysis Results:</h2>
+    <p><strong>Predicted emotion:</strong> {{ result.emotion }}</p>
+    {% endif %}
+</body>
+</html>
