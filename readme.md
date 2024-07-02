@@ -27,3 +27,4 @@ python app.py
 ```
 
 Upload the audio file using frontend and get the emotion of the audio file.
+
